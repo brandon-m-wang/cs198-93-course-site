@@ -1,856 +1,439 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/open-sans.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/main.css" crossorigin="anonymous" />
+    <link href="/assets/open-iconic-bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/bootstrap-toc.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href=" /favicon.ico" />
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/assets/jquery.min.js" crossorigin="anonymous"></script>
+    <script
+      src="/assets/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/bootstrap-toc.min.js"></script>
+    <title>Cubstart | CS 198-93</title>
+  </head>
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/assets/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/open-sans.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/main.css" crossorigin="anonymous">
-  <link href="/assets/open-iconic-bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/bootstrap-toc.min.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href=" /favicon.ico" />
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="/assets/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="/assets/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="/assets/bootstrap-toc.min.js"></script>
-  <script src="/assets/moment.min.js"></script>
-  <script src="/assets/fullcalendar.min.js"></script>
-  <script src="/assets/fullcalendar-gcal.min.js"></script>
-  <script src="/assets/fullcalendar-daygrid.min.js"></script>
-  <script src="/assets/fullcalendar-timegrid.min.js"></script>
-  <script src="/assets/fullcalendar-bootstrap.min.js"></script>
-  <script src="/assets/fullcalendar-list.min.js"></script>
-  <title> Cubstart | CS 198-93 </title>
-</head>
-
-<body>
-  <div class="wrapper bg-white">
-    <nav class="navbar navbar-light navbar-expand-md align-items-center">
-      <div class="container container-nav">
-        <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png"
-          style="object-fit:none; transform: scale(0.15); transform-origin: left top; margin-bottom: -250px; margin-right: -165px"
-          height=300px width=205px />
-        <a class="navbar-brand brand-berkeley" href="/"> Cubstart DeCal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item ">
-              <a class="nav-link " href="#schedule">
-                Schedule
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link " href="#staff">
-                Staff
-              </a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link " href="#syllabus">
-                Syllabus
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container">
-      <h2 class="cubstart-color">
-        CS 198-93 | Full Stack Web Development
-      </h2>
-      <h5 class="text-muted">
-        CS 198-93 @ UC Berkeley, Spring 2022
-      </h5>
-      <p>Lecture: Mondays 6:00pm-7:00pm @ Evans 60<br />
-        Lab: Thursdays 6:00pm-7:30pm @ Remote [Zoom]</p>
-      <h2 class="subheader">
-        Announcements
-      </h2>
-      <p>Cubstart is a 2-unit full-stack/mobile development course for beginner developers. Whether you need relevant
-        project
-        experiences to kickstart your resume, or if you have a burning desire to build but just don’t know where to
-        start, Cubstart is the course for you. We provide unique weekly guided full-stack projects, mentorship, and
-        technical workshops. The latter half of the semester will be dedicated to applying your skills to develop a
-        viable product/application with a team and a mentor. We encourage those with little or no CS experience to join!
-        If you are someone who’s passionate about learning and wants to create unique projects from start to finish,
-        Cubstart is the place for you!
-      </p>
-      <h2 id="schedule" class="subheader">
-        Schedule
-      </h2>
-      <div class="table-responsive py-3">
-        <table class="table table-bordered" style="margin-bottom: 1.5rem">
-          <thead>
-            <tr>
-              <th>Week</th>
-              <th>Date</th>
-              <th>Lecture</th>
-              <th>Lab Section</th>
-              <th>Homework/Project</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week1">
-                1</br>
-              </th>
-              <td>
-                Tu <br />
-                8/24
-              </td>
-              <td class="table-td-sm">
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw00.pdf">HW 0</a>,<br />
-                  <a href="/assets/pdf/hw00-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                8/26
-              </td>
-              <td class="table-td-sm">
-                <p>Introduction, big-O notation, arithmetic</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://www.youtube.com/watch?v=YhJhzzM5S34" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-                <span class="badge badge-light main-badge">
-                  <a href="/assets/notes/lec1_notes.pdf">Prof. Nelson's notes</a>
-                </span><br>
-                <div style="height:0.4rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week2">
-                2</br>
-              </th>
-              <td>
-                Tu <br />
-                8/31
-              </td>
-              <td class="table-td-sm">
-                <p>Divide-and-Conquer (Part I)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://www.youtube.com/watch?v=M8fUl2qN_1k&ab_channel=JelaniNelson"
-                    target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis01.pdf">Section 1</a>,<br />
-                  <a href="/assets/pdf/dis01-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-enBzrj5cbASvb2mvHZwy0pJ">Section 1
-                    walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw01.pdf">HW 1</a>,<br />
-                  <a href="/assets/pdf/hw01-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-em2Y6ge0VrHtnqGavFQfyHv">HW 1
-                    walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                9/2
-              </td>
-              <td class="table-td-sm">
-                <p>Divide-and-Conquer (Part II)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/6n8Jx4AIIh0" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week3">
-                3</br>
-              </th>
-              <td>
-                Tu <br />
-                9/7
-              </td>
-              <td class="table-td-sm">
-                <p>Fast Fourier Transform</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/dl8A-irOH14" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-                <span class="badge badge-light main-badge">
-                  <a href="/assets/notes/9_7_notes.pdf">Prof. Nelson's notes</a>
-                </span><br>
-                <div style="height:0.4rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis02.pdf">Section 2</a>,<br />
-                  <a href="/assets/pdf/dis02-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-ekDSsEEaUA3cl14F9lMgrtP">Section 2
-                    walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw02.pdf">HW 2</a>,<br />
-                  <a href="/assets/pdf/hw02-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-enombrP2mDfOGzYo_1UliwA">HW 2
-                    walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                9/9
-              </td>
-              <td class="table-td-sm">
-                <p>Decompositions of graphs</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/fpUYQT6JVFk" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-                <span class="badge badge-light main-badge">
-                  <a href="/assets/notes/9_9_notes.pdf">Prof. Nelson's notes</a>
-                </span><br>
-                <div style="height:0.4rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week4">
-                4</br>
-              </th>
-              <td>
-                Tu <br />
-                9/14
-              </td>
-              <td class="table-td-sm">
-                <p>Paths in graphs (Part I)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/PArb2gY-M5E" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis03.pdf">Section 3</a>,<br />
-                  <a href="/assets/pdf/dis03-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-empJL4vqFpIbsP3j4oW1eSN">Section 3
-                    walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw03.pdf">HW 3</a>,<br />
-                  <a href="/assets/pdf/hw03-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-elDkRH5RFIfeq0gdF4Jwa4N">HW 3
-                    walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                9/16
-              </td>
-              <td class="table-td-sm">
-                <p>Paths in graphs (Part II)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/HjJWXaixHp4" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week5">
-                5</br>
-              </th>
-              <td>
-                Tu <br />
-                9/21
-              </td>
-              <td class="table-td-sm">
-                <p>Minimum Spanning Trees</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/JSfZ0y8aCvw" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis04.pdf">Section 4</a>,<br />
-                  <a href="/assets/pdf/dis04-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-emKApPNUpY1fDIZknTNCKI3">Section 4
-                    walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw04.pdf">HW 4</a>,<br />
-                  <a href="/assets/pdf/hw04-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="https://www.youtube.com/playlist?list=PLQf-D2zH1-emhUWX5JBZlZcFIeC5djphG">HW 4
-                    walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                9/23
-              </td>
-              <td class="table-td-sm">
-                <p>Greedy Algorithms</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/yFNkyfFEcC4" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week6">
-                6</br>
-              </th>
-              <td>
-                Tu <br />
-                9/28
-              </td>
-              <td class="table-td-sm">
-                <p>Union Find</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/BE48krFIPPs" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis05.pdf">Section 5</a>,<br />
-                  <a href="/assets/pdf/dis05-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=8jDkhTzXWnc&list=PLQf-D2zH1-ekQAz49As-Vhk6dzmud86Wt&index=1&ab_channel=Cs170Departmental">Section
-                    5 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw05.pdf">HW 5</a>,<br />
-                  <a href="/assets/pdf/hw05-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                9/30
-              </td>
-              <td class="table-td-sm">
-                <p>Dynamic Programming (Part I)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/dZY9yPm-gME" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week7">
-                7</br>
-              </th>
-              <td>
-                Tu <br />
-                10/5
-              </td>
-              <td class="table-td-sm">
-                <p>Midterm 1</p>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis06.pdf">Section 6</a>,<br />
-                  <a href="/assets/pdf/dis06-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=NFcwKP4WHpo&list=PLQf-D2zH1-encnf4PjevQUie4SdP9pwyO&index=1&ab_channel=Cs170Departmental">Section
-                    6 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw06.pdf">HW 6</a>,<br />
-                  <a href="/assets/pdf/hw06-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=qrXV7fGy96c&list=PLQf-D2zH1-eml6D7IBnxV_9t6xZKi3fZ3&index=1&ab_channel=Cs170Departmental">HW
-                    6 walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                10/7
-              </td>
-              <td class="table-td-sm">
-                <p>Dynamic Programming (Part II)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/nQhgXK6YWr4" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week8">
-                8</br>
-              </th>
-              <td>
-                Tu <br />
-                10/12
-              </td>
-              <td class="table-td-sm">
-                <p>Linear Programming</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/H79XV6WT8yo" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis07.pdf">Section 7</a>,<br />
-                  <a href="/assets/pdf/dis07-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=dd6GOJpnRLU&list=PLQf-D2zH1-elbDgnmsp7fWQeQ9CQzuBml&index=1&ab_channel=Cs170Departmental">Section
-                    7 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw07.pdf">HW 7</a>,<br />
-                  <a href="/assets/pdf/hw07-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=eiToBM-CCSs&list=PLQf-D2zH1-ellSLB2SPcR_psQ4hJ7dT66&index=1&ab_channel=Cs170Departmental">HW
-                    7 walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                10/14
-              </td>
-              <td class="table-td-sm">
-                <p>Network Flow (Part I)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/IDGCkzoS0l8" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week9">
-                9</br>
-              </th>
-              <td>
-                Tu <br />
-                10/19
-              </td>
-              <td class="table-td-sm">
-                <p>Network Flow (Part II)</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/QILn3uf6SjM" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis08.pdf">Section 8</a>,<br />
-                  <a href="/assets/pdf/dis08-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=oWMUTkZU7l0&list=PLQf-D2zH1-enV3tkqQpLCjUFBeXL76Jhu&index=1&ab_channel=Cs170Departmental">Section
-                    8 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw08.pdf">HW 8</a>,<br />
-                  <a href="/assets/pdf/hw08-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=nsfYyM4PSRA&list=PLQf-D2zH1-ekGyTsXryhmr0Lp6n8Nu9ba&index=1&ab_channel=Cs170Departmental">HW
-                    8 walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                10/21
-              </td>
-              <td class="table-td-sm">
-                <p>Zero-Sum Games</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/nv5atJpIH5c" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week10">
-                10</br>
-              </th>
-              <td>
-                Tu <br />
-                10/26
-              </td>
-              <td class="table-td-sm">
-                <p>Multiplicative Updates</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/yKOG1gazGYs" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis09.pdf">Section 9</a>,<br />
-                  <a href="/assets/pdf/dis09-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw09.pdf">HW 9</a>,<br />
-                  <a href="/assets/pdf/hw09-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                10/28
-              </td>
-              <td class="table-td-sm">
-                <p>Reductions, Bipartite Matching</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/HGCv3u_xT1s" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week11">
-                11</br>
-              </th>
-              <td>
-                Tu <br />
-                11/2
-              </td>
-              <td class="table-td-sm">
-                <p>Midterm 2</p>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis10.pdf">Section 10</a>,<br />
-                  <a href="/assets/pdf/dis10-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=9HYAb2dcPXY&list=PLQf-D2zH1-ekIvU1RB6v2ZMgoNbkFV0yN&index=1&ab_channel=Cs170Departmental">Section
-                    10 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw10.pdf">HW 10</a>,<br />
-                  <a class="text-muted">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=Sdki1CeSd3Y&list=PLQf-D2zH1-ekb-48UM6_0ZkvvM6j47SQ8&index=1&ab_channel=Cs170Departmental">HW
-                    10 walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                11/4
-              </td>
-              <td class="table-td-sm">
-                <p>Search Problems</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/3ymAkKILLn0" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week12">
-                12</br>
-              </th>
-              <td>
-                Tu <br />
-                11/9
-              </td>
-              <td class="table-td-sm">
-                <p>NP-Completeness</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/aCZPoD6lIN0" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis11.pdf">Section 11</a>,<br />
-                  <a href="/assets/pdf/dis11-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=CHIP8RlHxQ8&list=PLQf-D2zH1-enYIUrJrmYUXzU8Qn19UaTW&index=1&ab_channel=Cs170Departmental">Section
-                    11 walkthrough</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw11.pdf">HW 11</a>,<br />
-                  <a href="/assets/pdf/hw11-sol.pdf">solutions</a><br />
-                </div>
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a
-                    href="https://www.youtube.com/watch?v=KHlNPNkjapA&list=PLQf-D2zH1-enkHxhfnseuvcnib2kHb2Tp&index=1&ab_channel=Cs170Departmental">HW
-                    11 walkthrough</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                11/11
-              </td>
-              <td class="table-td-sm">
-                <p>No Class (Veterans Day)</p>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week13">
-                13</br>
-              </th>
-              <td>
-                Tu <br />
-                11/16
-              </td>
-              <td class="table-td-sm">
-                <p>Coping with NP-completeness</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/TFcrVJBsDas" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/dis12.pdf">Section 12</a>,<br />
-                  <a href="/assets/pdf/dis12-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw12.pdf">HW 12</a>,<br />
-                  <a href="/assets/pdf/hw12-sol.pdf">solutions</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                11/18
-              </td>
-              <td class="table-td-sm">
-                <p>Randomized Algorithms</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/dlA42pui4ro" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week14">
-                14</br>
-              </th>
-              <td>
-                Tu <br />
-                11/23
-              </td>
-              <td class="table-td-sm">
-                <p>Hashing</p>
-                <span class="badge badge-light main-badge">
-                  <a href="https://youtu.be/ieLvvI2Hqe4" target="_blank">webcast</a>
-                </span>
-                <div style="height:0.5rem"></div>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-                <div class="badge badge-light my-1 p-3 main-badge">
-                  <a href="/assets/pdf/hw13.pdf">HW 13</a>,<br />
-                  <a class="text-muted">solutions</a><br />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                11/25
-              </td>
-              <td class="table-td-sm">
-                <p>No Class (Thanksgiving)</p>
-              </td>
-            </tr>
-            <tr>
-              <th rowspan="2" style="text-align: center" id="week15">
-                15</br>
-              </th>
-              <td>
-                Tu <br />
-                11/30
-              </td>
-              <td class="table-td-sm">
-                <p>Sketching, Streaming</p>
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-              </td>
-              <td rowspan="2" style="vertical-align: middle; text-align: center;">
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Th <br />
-                12/2
-              </td>
-              <td class="table-td-sm">
-                <p>Lower Bounds</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h2 id="staff" class="subheader">
-          Course Staff
-        </h2>
-        <div class="course-staff">
-          <h3 class="cubstart-color" style="margin: 1.5rem 0 2.5rem">Lecturers</h3>
-          <div class="staff-section">
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/alexlu.jpg"
-                height=150px width=auto />
-              <h4>Alex Lu</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>Lecturer (iOS)</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/brandon.JPG"
-                height=150px width=auto />
-              <h4>Brandon Wang</h4>
-              <h5>wangb@berkeley.edu</h5>
-              <h6>Lecturer (Web)</h6>
-              <p>Bio</p>
-            </div>
-          </div>
-          <h3 class="cubstart-color" style="margin: 1.5rem 0 2.5rem">Teaching Assistants</h3>
-          <div class="staff-section">
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/ali.jpg"
-                height=150px width=auto />
-              <h4>Ali Huh</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>Web Lab TA</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/khushi.jpg"
-                height=150px width=auto />
-              <h4>Khushi Desai</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>Web Lab TA</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/charles.jpg"
-                height=150px width=auto />
-              <h4>Charles Wang</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>iOS Lab TA</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/pranati.jpg"
-                height=150px width=auto />
-              <h4>Pranati Kuppa</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>iOS Lab TA</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/tony.jpg"
-                height=150px width=auto />
-              <h4>Tony Hong</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>iOS Lab TA</h6>
-              <p>Bio</p>
-            </div>
-            <div class="staff-member">
-              <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/jordan.jpg"
-                height=150px width=auto />
-              <h4>Jordan Yee</h4>
-              <h5>email@berkeley.edu</h5>
-              <h6>iOS Lab TA</h6>
-              <p>Bio</p>
-            </div>
+  <body>
+    <div class="wrapper bg-white">
+      <nav class="navbar navbar-light navbar-expand-md align-items-center">
+        <div class="container container-nav">
+          <img
+            src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png"
+            style="
+              object-fit: none;
+              transform: scale(0.15);
+              transform-origin: left top;
+              margin-bottom: -250px;
+              margin-right: -165px;
+            "
+            height="300px"
+            width="205px"
+          />
+          <a class="navbar-brand brand-berkeley" href="/"> Cubstart DeCal</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#schedule"> Schedule </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#staff"> Staff </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#syllabus"> Syllabus </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <h2 id="syllabus" class="subheader">
-          Syllabus
-        </h2>
+      </nav>
+      <div class="container">
+        <h2 class="cubstart-color">CS 198-93 | Full Stack Web Development</h2>
+        <h5 class="text-muted">CS 198-93 @ UC Berkeley, Spring 2022</h5>
+        <p>
+          Lecture: Mondays 6:00pm-7:00pm @ Evans 60<br />
+          Lab: Thursdays 6:00pm-7:30pm @ Remote [Zoom]
+        </p>
+        <h2 class="subheader">Announcements</h2>
+        <p>
+          Cubstart is a 2-unit full-stack/mobile development course for beginner
+          developers. Whether you need relevant project experiences to kickstart
+          your resume, or if you have a burning desire to build but just don’t
+          know where to start, Cubstart is the course for you. We provide unique
+          weekly guided full-stack projects, mentorship, and technical
+          workshops. The latter half of the semester will be dedicated to
+          applying your skills to develop a viable product/application with a
+          team and a mentor. We encourage those with little or no CS experience
+          to join! If you are someone who’s passionate about learning and wants
+          to create unique projects from start to finish, Cubstart is the place
+          for you!
+        </p>
+        <h2 id="schedule" class="subheader">Schedule</h2>
+        <div class="table-responsive py-3">
+          <table class="table table-bordered" style="margin-bottom: 1.5rem">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Date</th>
+                <th>Lecture</th>
+                <th>Lab Section</th>
+                <th>Homework/Project</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-content"></tbody>
+          </table>
+          <h2 id="staff" class="subheader">Course Staff</h2>
+          <div class="course-staff">
+            <h3 class="cubstart-color" style="margin: 1.5rem 0 2.5rem">
+              Lecturers
+            </h3>
+            <div class="staff-section">
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/alexlu.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Alex Lu</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>Lecturer (iOS)</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/brandon.JPG"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Brandon Wang</h4>
+                <h5>wangb@berkeley.edu</h5>
+                <h6>Lecturer (Web)</h6>
+                <p>Bio</p>
+              </div>
+            </div>
+            <h3 class="cubstart-color" style="margin: 1.5rem 0 2.5rem">
+              Teaching Assistants
+            </h3>
+            <div class="staff-section">
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/ali.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Ali Huh</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>Web Lab TA</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/khushi.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Khushi Desai</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>Web Lab TA</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/charles.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Charles Wang</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>iOS Lab TA</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/pranati.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Pranati Kuppa</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>iOS Lab TA</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/tony.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Tony Hong</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>iOS Lab TA</h6>
+                <p>Bio</p>
+              </div>
+              <div class="staff-member">
+                <img
+                  src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/profile_images/jordan.jpg"
+                  height="150px"
+                  width="auto"
+                />
+                <h4>Jordan Yee</h4>
+                <h5>email@berkeley.edu</h5>
+                <h6>iOS Lab TA</h6>
+                <p>Bio</p>
+              </div>
+            </div>
+          </div>
+          <h2 id="syllabus" class="subheader">Syllabus</h2>
+        </div>
       </div>
     </div>
-  </div>
-  <footer class="page-footer">
-    <!-- something here -->
-  </footer>
-</body>
+    <footer class="page-footer">
+      <!-- something here -->
+    </footer>
+  </body>
+  <script>
+    const schedule = [
+      {
+        week: 1,
+        date: "1/31",
+        lecture: "Introduction, HTML/CSS Basics, Document Object Model (DOM)",
+        lectureLink: "",
+        slides: "",
+        lab: "",
+        homework: "HW 1: Personal Portfolio",
+        homeworkLink: "",
+      },
+      {
+        week: 2,
+        date: "2/7",
+        lecture: "Targeting the DOM, JavaScript Foundations",
+        lectureLink: "",
+        slides: "",
+        lab: "Project OH/Checkoff: Personal Portfolio",
+        homework: "HW 2: Interactive Geocoding Map",
+        homeworkLink: "",
+      },
+      {
+        week: 3,
+        date: "2/14",
+        lecture: "HTTP, CRUD, Leveraging APIs",
+        lectureLink: "",
+        slides: "",
+        lab: "Project OH/Checkoff: Interactive Geocoding Map",
+        homework: "HW 3: Caption Generation with Computer Vision",
+        homeworkLink: "",
+      },
+      {
+        week: 4,
+        date: "2/21",
+        lecture: "(Async, Academic Holiday) Introduction to React.js",
+        lectureLink: "",
+        slides: "",
+        lab: "Project OH/Checkoff: Caption Generation with Computer Vision",
+        homework: "HW 4: Spectrum Waveform with Spotify Integration",
+        homeworkLink: "",
+      },
+      {
+        week: 5,
+        date: "2/28",
+        lecture: "States, Hooks, and Props in React.js",
+        lectureLink: "",
+        slides: "",
+        lab: "Project OH/Checkoff: Spectrum Waveform with Spotify Integration",
+        homework: "HW 5: Tree Traversal Visualizer",
+        homeworkLink: "",
+      },
+      {
+        week: 6,
+        date: "3/7",
+        lecture: "Node.js HTTP Servers, Routing and Rendering in Express",
+        lectureLink: "",
+        slides: "",
+        lab: "Project/OH Checkoff: Tree Traversal Visualizer",
+        homework: "HW 6: Video Streaming App",
+        homeworkLink: "",
+      },
+      {
+        week: 7,
+        date: "3/14",
+        lecture: "Middleware, Websockets, SocketIO",
+        lectureLink: "",
+        slides: "",
+        lab: "Project/OH Checkoff: Video Streaming App",
+        homework: "HW 7: Real-time Chat App",
+        homeworkLink: "",
+      },
+      {
+        week: 8,
+        date: "3/21",
+        lecture: "No Class (Spring Recess)",
+        lectureLink: "",
+        slides: "",
+        lab: "",
+        homework: "",
+        homeworkLink: "",
+      },
+      {
+        week: 9,
+        date: "3/28",
+        lecture: "The Cloud, Firebase, Firestore",
+        lectureLink: "",
+        slides: "",
+        lab: "Project/OH Checkoff: Real-time Chat App",
+        homework: "HW 8: Build a Social Network",
+        homeworkLink: "",
+      },
+      {
+        week: 10,
+        date: "4/4",
+        lecture: "Deploying/Hosting Projects, Boosting Your Resume",
+        lectureLink: "",
+        slides: "",
+        lab: "Project/OH Checkoff: Build a Social Network",
+        homework: "Design Mockup - First Draft",
+        homeworkLink: "",
+      },
+      {
+        week: 11,
+        date: "4/11",
+        lecture: "Ideation, Design Fundamentals",
+        lectureLink: "",
+        slides: "",
+        lab: "Ideation, Final Project OH",
+        homework: "Final Project",
+        homeworkLink: "",
+      },
+      {
+        week: 12,
+        date: "4/18",
+        lecture: "Final Project OH",
+        lectureLink: "",
+        slides: "",
+        lab: "Final Project OH",
+        homework: "Final Project",
+        homeworkLink: "",
+      },
+      {
+        week: 13,
+        date: "4/25",
+        lecture: "Final Project OH",
+        lectureLink: "",
+        slides: "",
+        lab: "Final Project OH",
+        homework: "Prep for Demo Day",
+        homeworkLink: "",
+      },
+      {
+        week: 14,
+        date: "5/2",
+        lecture: "",
+        lectureLink: "",
+        slides: "",
+        lab: "Demo Day",
+        homework: "",
+        homeworkLink: "",
+      },
+    ];
+    const scheduleElement = document.getElementById("schedule-content");
+    schedule.forEach((entry) => {
+      console.log(entry);
+      let tr = document.createElement("tr");
+      let weekTh = document.createElement("th");
+      weekTh.rowSpan = "1";
+      weekTh.style = "text-align: center";
+      weekTh.id = "week" + entry.week;
+      weekTh.innerHTML = entry.week;
+      weekTh.appendChild(document.createElement("br"));
+      tr.appendChild(weekTh);
 
+      let dateTd = document.createElement("td");
+      dateTd.rowSpan = "1";
+      dateTd.appendChild(document.createTextNode("Mon"));
+      dateTd.appendChild(document.createElement("br"));
+      dateTd.appendChild(document.createTextNode(entry.date));
+      tr.appendChild(dateTd);
+
+      let lectureTd = document.createElement("td");
+      lectureTd.rowSpan = "1";
+      let lectureP = document.createElement("p");
+      lectureP.innerHTML = entry.lecture;
+      lectureTd.appendChild(lectureP);
+      if (entry.lectureLink) {
+        let lectureLinkSpan = document.createElement("span");
+        lectureLinkSpan.className = "badge badge-light main-badge";
+        let lectureLinkA = document.createElement("a");
+        lectureLinkA.href = entry.lectureLink;
+        lectureLinkA.target = "_blank";
+        lectureLinkA.innerHTML = "webcast";
+        lectureLinkSpan.appendChild(lectureLinkA);
+        lectureTd.appendChild(lectureLinkSpan);
+      }
+      let randomDiv = document.createElement("div");
+      randomDiv.style = "height:0.5rem";
+      lectureTd.appendChild(randomDiv);
+      tr.appendChild(lectureTd);
+
+      let sectionTd = document.createElement("td");
+      sectionTd.rowSpan = "1";
+      sectionTd.className = "table-td-sm";
+      let sectionP = document.createElement("p");
+      sectionP.innerHTML = entry.lab;
+      sectionTd.appendChild(sectionP);
+      sectionTd.appendChild(randomDiv);
+      tr.appendChild(sectionTd);
+
+      let homeworkTd = document.createElement("td");
+      homeworkTd.rowSpan = "1";
+      homeworkTd.style = "vertical-align: middle; text-align: center;";
+      let homeworkSpan = document.createElement("span");
+      if (entry.homework) {
+        homeworkSpan.className = "badge badge-light my-1 p-3 main-badge";
+      }
+      if (entry.homeworkLink) {
+        let homeworkLinkA = document.createElement("a");
+        homeworkLinkA.href = entry.homeworkLink;
+        homeworkLinkA.target = "_blank";
+        homeworkLinkA.innerHTML = entry.homework;
+        homeworkSpan.appendChild(homeworkLinkA);
+      } else {
+        let homeworkP = document.createElement("p");
+        homeworkP.innerHTML = entry.homework;
+        homeworkSpan.appendChild(homeworkP);
+      }
+      homeworkTd.appendChild(homeworkSpan);
+      tr.appendChild(homeworkTd);
+      scheduleElement.appendChild(tr);
+    });
+  </script>
 </html>
