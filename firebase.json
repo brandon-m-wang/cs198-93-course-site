@@ -5,6 +5,7 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       { "source": "/[Ii][Oo][Ss]", "destination": "/iOS.html" },
+      { "source": "/sp21", "destination": "/index-sp21.html" },
       { "source": "/[Hh][Ww]1", "destination": "/web-hw/hw1.html" },
       {
         "source": "**",

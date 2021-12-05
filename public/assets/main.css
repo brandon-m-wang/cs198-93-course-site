@@ -1,8 +1,8 @@
-* {
+/* * {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +14,11 @@ html {
 
 body {
   background-color: #f9f9f9;
+}
+
+mark {
+  border-radius: 5px;
+  padding: 0 0.1em;
 }
 
 .oi {
@@ -81,8 +86,8 @@ ul span {
 }
 
 .navbar {
-  margin-top: 0.5rem;
-  margin-bottom: 1.25rem;
+  min-height: 70px;
+  height: auto;
 }
 
 .navbar .navbar-nav li.dropdown a.dropdown-toggle {
@@ -138,6 +143,11 @@ ul span {
   font-style: italic;
 }
 
+.staff-member p {
+  text-align: center;
+  font-size: 0.925rem;
+}
+
 .wrapper {
   padding-bottom: 4rem;
 }
@@ -145,6 +155,7 @@ ul span {
 .page-footer {
   padding: 2.5rem 0;
   color: #999;
+  position: relative;
   background-color: #f9f9f9;
 }
 
@@ -173,6 +184,83 @@ ul span {
 
 .staff-bio {
   font-size: 14px;
+}
+
+.side-nav {
+  position: fixed;
+  left: 0;
+  width: 250px;
+  top: 70px;
+  height: 100%;
+  padding: 2rem 1.25rem 1.25rem 1.25rem;
+  background: #f2f2f2;
+}
+
+.side-nav h6 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #307c9c;
+  margin-bottom: 1.6rem;
+}
+
+#nav-topics > * {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.main-content {
+  min-height: 100vh !important;
+  position: absolute;
+  padding: 2rem 7rem 2rem 7rem;
+  left: 250px;
+  top: 70px;
+  width: calc(100% - 250px);
+}
+
+.main-content > h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #307c9c;
+}
+
+.main-content > hr {
+  margin-bottom: 3rem;
+  background: #307c9c;
+  border: none;
+  height: 2px;
+}
+
+pre code.hljs {
+  font-size: 0.9rem;
+  background: #efefef;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d7d7d7 #f4f4f4 #f4f4f4 #d7d7d7;
+  border-radius: 5px;
+}
+
+.inline-img-container {
+  text-align: center;
+  width: 100%;
+  overflow: auto;
+  margin: 2rem 0;
+}
+
+.inline-img {
+  border: 2px solid #307c9c;
+  border-radius: 10px;
+  filter: brightness(0.97);
+}
+
+@media (max-width: 780px) {
+  .side-nav {
+    display: none;
+  }
+  .main-content {
+    left: 0;
+    min-width: 100%;
+  }
 }
 
 .fc-time-grid .fc-slats td {

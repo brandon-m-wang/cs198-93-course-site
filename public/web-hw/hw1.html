@@ -8,312 +8,157 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/bootstrap.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="/assets/main.css" crossorigin="anonymous" />
-    <link href="/assets/open-iconic-bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/bootstrap-toc.min.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/png" href="cubstart.ico" />
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/assets/jquery.min.js" crossorigin="anonymous"></script>
     <script src="/assets/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/assets/bootstrap-toc.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css">
     <title>Cubstart | CS 198-75</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="navbar navbar-light navbar-expand-md align-items-center">
-            <div class="container container-nav">
-                <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png" style="
+    <nav class="navbar navbar-light navbar-expand-md align-items-center"
+        style="background: #307c9c; position: fixed; width: 100%; z-index: 100">
+        <div class="container container-nav">
+            <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png" style="
               object-fit: none;
               transform: scale(0.11);
               transform-origin: left top;
               margin-bottom: -260px;
               margin-right: -175px;
             " height="300px" width="205px" />
-                <a class="navbar-brand brand-berkeley" href="/"> Cubstart DeCal</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#schedule"> Schedule </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#staff"> Staff </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#syllabus"> Syllabus </a>
-                        </li>
-                    </ul>
-                </div>
+            <a class="navbar-brand brand-berkeley" href="/" style="color: #f2f2f2"> Cubstart DeCal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#schedule" style="color: #f2f2f2"> Schedule </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#staff" style="color: #f2f2f2"> Staff </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#syllabus" style="color: #f2f2f2"> Syllabus </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <footer class="page-footer" style="background: #F4F4F4; text-align: center">
-            <img src="https://calhacks-sierra.s3-us-west-2.amazonaws.com/assets/branding/cubstart.png" style="
-                  object-fit: none;
-                  transform: scale(0.15);
-                  transform-origin: left top;
-                  margin-bottom: -250px;
-                  margin-right: -165px;
-                " height="300px" width="205px" />
-            Questions? Send us an email: cubstart@calhacks.io
-        </footer>
+        </div>
+    </nav>
+    <div class="side-nav">
+        <h6>Navigation</h6>
+        <div id="nav-topics">
+            <!-- Dynamically generate the a tags for headers -->
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Project 1: Personal Portfolio <span class="cubstart-color">(Due Fri, 2/11)</span></h1>
+        <hr>
+        <h2 id="introduction">Introduction</h2>
+        <p>Welcome to CS198-75! For your first homework, you'll be building out a single-page complete personal
+            portfolio that can serve as your own site for showcasing your education, work experience, achievements,
+            and projects using HTML and CSS. You can expect the format of all released homeworks here on out to be
+            in this guided doc format. Feel free to collaborate with your teammates on this homework, but remember
+            that everyone has to submit their own homework.
+        </p>
+        <h2 id="project-set-up">Project Set-up</h2>
+        <p>For this project (and all projects), you will have a project skeleton to work off of. The skeleton includes
+            some JavaScript components, pre-existing styling, and boilerplate code to help you get started. You only
+            need to worry about the parts marked with comments corresponding to each part of the homework. </p>
+        <p>To fetch the skeleton, you will git clone the skeleton repository into your
+            <mark><code>cubstart</code></mark> directory. While at your <mark><code>cubstart</code></mark> directory,
+            run the following bash command:
+        <pre><code>git clone --depth=1 --branch=master https://github.com/brandon-m-wang/cubstart-hw1-skeleton.git hw1 && rm -rf ./hw1/.git</code></pre>
+        You should now see a new <mark><code>hw1</code></mark> folder in the directory. Accessing it includes all the
+        contents of the project.
+        </p>
+        <p>To open this project in VSCode, run this bash command:
+        <pre><code>code hw1</code></pre>
+        </p>
+        <h2 id="part-1:-the-document-head">Part 1: The Document Head</h2>
+        <p>Access the <mark><code>index.html</code></mark> file in the project directory. This is where the layout of
+            your site is; think of it as
+            the skeleton of the site. </p>
+        <p>Recall that the head of the document is where metadata, page information, and important link tags go. You
+            are able to link style sheets (your .css files) within the document head, as well as title your page as
+            it shows on your browser tab.</p>
+        <p>Add a title for your website, and link your stylesheet in the enclosing head tags. The corresponding tags are
+            referenced for your convenience.</p>
+        <pre><code>&lt;link rel="" href=""&gt;&#13;&lt;title&gt;Your Name&lt;/title&gt;</code></pre>
+        <h2 id="part-2:-html-tags-and-attributes">Part 2: HTML Tags and Attributes</h2>
+        <p>Here, you'll be creating your logo, which in this example will be your initials. Within the
+            <mark><code>h3</code></mark> tags in the problem, you will add an <mark><code>a</code></mark> tag with your
+            initials, with the class of "link" linking to the same page that it is on (referencing the current path is
+            possible with "/").
+        </p>
+        <h2 id="part-3:-css-flex-layout">Part 3: CSS Flex Layout</h2>
+        <p>Take a look at the header tag, with classes "header" and "center." This entire section is your page's header,
+            which includes your logo, navigation, and other buttons. Think about how a header like this is laid out
+            across the top of a page. What kinds of orientation would you need for its elements?</p>
+        <pre><code>&lt;header class="header center"&gt;</code></pre>
+        <p>
+            Within the <mark><code>styles.css</code></mark> file, you'll find a class selector for the class
+            <mark><code>center</code></mark>. The intent of this class is to vertically center the children of
+            elements of this class using a flex-box layout. Accomplish this task by adding the two necessary styles to
+            achieve this.
+        </p>
+        <p>Underneath, there is also a class selector for the class <mark><code>header</code></mark>. Because our header
+            in <mark><code>index.html</code></mark> includes both classes "header" and "center," styling the
+            "header" class will also cause stylistic changes on our header element. Recall that
+            <code><mark>justify-content</mark></code> is the attribute that pertains to manipulating elements in the
+            horizontal direction in a flex-box context. Choose the style for <code><mark>justify-content</mark></code>
+            that you feel would best fit the look of the header tag and its children.
+        </p>
+        <div class="inline-img-container">
+            <img src="https://cdn-media-1.freecodecamp.org/images/OBGVr-DdHiQ2y9VOWuhXqXeGnFnyDSBTx7hv"
+                class="inline-img" height="150px" width=auto />
+        </div>
+        <h2 id="part-4:-basic-animation-with-css">Part 4: Basic Animation with CSS</h2>
+        <p>You will now create a simple underline animation with CSS. You will notice that the styles in this section
+            have a strange selector:</p>
+        <pre><code>.link::before {
+    content: "";
+    display: inline;
+    width: 0%;
+    height: 0.2em;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--clr-primary);
+    /* transition: */
+}</code></pre>
+        <p>The <mark><code>::before</code></mark> selector is called a "pseudo-selector," which essentially just refers
+            to a pseudo-element that exists before the selected element. You can give this pseudo-element an appearance
+            by setting its <mark><code>display</code></mark> to a specific attribute. In this case, we are using it to
+            create our text underline. You'll notice now, if you try to hover the links on the header, you will see the
+            underline, but it just appears instantly. We want to create this animation, so that it comes out from the
+            left.</p>
+        <p>The <mark><code>transition</code></mark> property provides a way to control animation speed when changing CSS
+            properties. Instead of having property changes take effect immediately, you can cause the changes in a
+            property to take place over a period of time. Property changes are found in elements that have properties
+            that change on certain actions, for instance hover (mouse over) and focus (selected). The property changes
+            can be defined by <mark><code>:hover</code></mark> and <mark><code>:hover</code></mark> selectors as such:
+        </p>
+        <pre><code>.link:hover::before, .link:focus::before {
+    width: 100%;
+}</code></pre>
+        <p>Observe that the way the underline appears. When the link is either hovered or selected, the width of
+            the pseudo-element <mark><code>.link::before</code></mark> changes to 100%, else it is 0 when it isn't
+            hovered/selected. We want to animate this change. Fill in the transition style so that we achieve a smooth
+            animation.</p>
+        <pre><code class="language-css">transition: [property] [duration] [timing-function];</code></pre>
+        <p>In the property section, you will want to target <code><mark>width</mark></code> as mentioned previously. As
+            for the timing-function, you can use <mark><code>ease-in</code></mark>, but there are many options
+            available. Try playing around with the timing of the animation and see the results by hovering your links
+            and logo!
+        </p>
+        <h2 id="part-5:-understanding-media-queries">Part 5: Understanding Media Queries</h2>
+        <p></p>
+    </div>
+    <script>hljs.highlightAll();</script>
 </body>
-<script>
-    const schedule = [
-        {
-            week: 1,
-            date: "1/31",
-            lecture: "Introduction, HTML/CSS Basics, Document Object Model (DOM)",
-            lectureLink: "/",
-            slides: "/",
-            lab: "",
-            homework: "HW 1: Personal Portfolio",
-            due: "2/11",
-            homeworkLink: "/",
-        },
-        {
-            week: 2,
-            date: "2/7",
-            lecture: "Targeting the DOM, JavaScript Foundations",
-            lectureLink: "",
-            slides: "",
-            lab: "Project OH/Checkoff: Personal Portfolio",
-            homework: "HW 2: Interactive Geocoding Map",
-            due: "2/18",
-            homeworkLink: "",
-        },
-        {
-            week: 3,
-            date: "2/14",
-            lecture: "HTTP, CRUD, Leveraging APIs",
-            lectureLink: "",
-            slides: "",
-            lab: "Project OH/Checkoff: Interactive Geocoding Map",
-            homework: "HW 3: Caption Generation with Computer Vision",
-            due: "2/25",
-            homeworkLink: "",
-        },
-        {
-            week: 4,
-            date: "2/21",
-            lecture: "(Async, Academic Holiday) Introduction to React.js",
-            lectureLink: "",
-            slides: "",
-            lab: "Project OH/Checkoff: Caption Generation with Computer Vision",
-            homework: "HW 4: Spectrum Waveform with Spotify Integration",
-            due: "3/4",
-            homeworkLink: "",
-        },
-        {
-            week: 5,
-            date: "2/28",
-            lecture: "States, Hooks, and Props in React.js",
-            lectureLink: "",
-            slides: "",
-            lab: "Project OH/Checkoff: Spectrum Waveform with Spotify Integration",
-            homework: "HW 5: Tree Traversal Visualizer",
-            due: "3/11",
-            homeworkLink: "",
-        },
-        {
-            week: 6,
-            date: "3/7",
-            lecture: "Node.js HTTP Servers, Routing and Rendering in Express",
-            lectureLink: "",
-            slides: "",
-            lab: "Project/OH Checkoff: Tree Traversal Visualizer",
-            homework: "HW 6: Video Streaming App",
-            due: "3/18",
-            homeworkLink: "",
-        },
-        {
-            week: 7,
-            date: "3/14",
-            lecture: "Middleware, Websockets, SocketIO",
-            lectureLink: "",
-            slides: "",
-            lab: "Project/OH Checkoff: Video Streaming App",
-            homework: "HW 7: Real-time Chat App",
-            due: "4/1",
-            homeworkLink: "",
-        },
-        {
-            week: 8,
-            date: "3/21",
-            lecture: "No Class (Spring Recess)",
-            lectureLink: "",
-            slides: "",
-            lab: "",
-            homework: "",
-            due: "",
-            homeworkLink: "",
-        },
-        {
-            week: 9,
-            date: "3/28",
-            lecture: "The Cloud, Firebase, Firestore",
-            lectureLink: "",
-            slides: "",
-            lab: "Project/OH Checkoff: Real-time Chat App",
-            homework: "HW 8: Build a Social Network",
-            due: "4/8",
-            homeworkLink: "",
-        },
-        {
-            week: 10,
-            date: "4/4",
-            lecture: "Deploying/Hosting Projects, Boosting Your Resume",
-            lectureLink: "",
-            slides: "",
-            lab: "Project/OH Checkoff: Build a Social Network",
-            homework: "Design Mockup - First Draft",
-            due: "4/15",
-            homeworkLink: "",
-        },
-        {
-            week: 11,
-            date: "4/11",
-            lecture: "Ideation, Design Fundamentals",
-            lectureLink: "",
-            slides: "",
-            lab: "Ideation, Final Project OH",
-            homework: "Final Project",
-            due: "4/29",
-            homeworkLink: "",
-        },
-        {
-            week: 12,
-            date: "4/18",
-            lecture: "Final Project OH",
-            lectureLink: "",
-            slides: "",
-            lab: "Final Project OH",
-            homework: "Final Project",
-            due: "4/29",
-            homeworkLink: "",
-        },
-        {
-            week: 13,
-            date: "4/25",
-            lecture: "Final Project OH",
-            lectureLink: "",
-            slides: "",
-            lab: "Final Project OH",
-            homework: "Prep for Demo Day",
-            due: "",
-            homeworkLink: "",
-        },
-        {
-            week: 14,
-            date: "5/2",
-            lecture: "",
-            lectureLink: "",
-            slides: "",
-            lab: "Demo Day",
-            homework: "",
-            due: "",
-            homeworkLink: "",
-        },
-    ];
-    const scheduleElement = document.getElementById("schedule-content");
-    schedule.forEach((entry) => {
-        let tr = document.createElement("tr");
-        let weekTh = document.createElement("th");
-        weekTh.rowSpan = "1";
-        weekTh.style = "text-align: center";
-        weekTh.id = "week" + entry.week;
-        weekTh.innerHTML = entry.week;
-        weekTh.appendChild(document.createElement("br"));
-        tr.appendChild(weekTh);
-
-        let dateTd = document.createElement("td");
-        dateTd.rowSpan = "1";
-        dateTd.appendChild(document.createTextNode("Mon"));
-        dateTd.appendChild(document.createElement("br"));
-        dateTd.appendChild(document.createTextNode(entry.date));
-        tr.appendChild(dateTd);
-
-        let lectureTd = document.createElement("td");
-        lectureTd.rowSpan = "1";
-        let lectureP = document.createElement("p");
-        lectureP.innerHTML = entry.lecture;
-        lectureTd.appendChild(lectureP);
-        if (entry.lectureLink) {
-            let lectureLinkSpan = document.createElement("span");
-            lectureLinkSpan.className = "badge badge-light main-badge";
-            let lectureLinkA = document.createElement("a");
-            lectureLinkA.href = entry.lectureLink;
-            lectureLinkA.target = "_blank";
-            lectureLinkA.innerHTML = "Recording";
-            lectureLinkSpan.appendChild(lectureLinkA);
-            lectureLinkSpan.style = "margin-right: 1rem; margin-bottom: 0.5rem";
-            lectureTd.appendChild(lectureLinkSpan);
-        }
-        if (entry.slides) {
-            let lectureLinkSpan = document.createElement("span");
-            lectureLinkSpan.className = "badge badge-light main-badge";
-            let lectureLinkA = document.createElement("a");
-            lectureLinkA.href = entry.lectureLink;
-            lectureLinkA.target = "_blank";
-            lectureLinkA.innerHTML = "Slides";
-            lectureLinkSpan.appendChild(lectureLinkA);
-            lectureTd.appendChild(lectureLinkSpan);
-        }
-        let randomDiv = document.createElement("div");
-        randomDiv.style = "height:0.5rem";
-        lectureTd.appendChild(randomDiv);
-        tr.appendChild(lectureTd);
-
-        let sectionTd = document.createElement("td");
-        sectionTd.rowSpan = "1";
-        sectionTd.className = "table-td-sm";
-        let sectionP = document.createElement("p");
-        sectionP.innerHTML = entry.lab;
-        sectionTd.appendChild(sectionP);
-        sectionTd.appendChild(randomDiv);
-        tr.appendChild(sectionTd);
-
-        let homeworkTd = document.createElement("td");
-        homeworkTd.rowSpan = "1";
-        homeworkTd.style = "vertical-align: middle; text-align: center;";
-        let homeworkSpan = document.createElement("span");
-        if (entry.homework) {
-            homeworkSpan.className = "badge badge-light my-1 p-3 main-badge";
-            homeworkSpan.style = "width: 250px; word-break: break-word";
-        }
-        if (entry.homeworkLink) {
-            let homeworkLinkA = document.createElement("a");
-            let dueDateText = document.createTextNode("Due: Fri, " + entry.due);
-            let homeworkText = document.createTextNode(entry.homework);
-            let dueDateBr = document.createElement("br");
-            homeworkLinkA.appendChild(homeworkText);
-            homeworkLinkA.appendChild(dueDateBr);
-            homeworkLinkA.appendChild(dueDateText);
-            homeworkLinkA.href = entry.homeworkLink;
-            homeworkLinkA.target = "_blank";
-            homeworkLinkA.style = "margin-bottom: 0";
-            homeworkSpan.appendChild(homeworkLinkA);
-        } else {
-            let homeworkP = document.createElement("p");
-            let dueDateText = document.createTextNode("");
-            if (entry.due) {
-                dueDateText = document.createTextNode("Due: Fri, " + entry.due);
-            }
-            let homeworkText = document.createTextNode(entry.homework);
-            let dueDateBr = document.createElement("br");
-            homeworkP.appendChild(homeworkText);
-            homeworkP.appendChild(dueDateBr);
-            homeworkP.appendChild(dueDateText);
-            homeworkP.style = "margin-bottom: 0";
-            homeworkSpan.appendChild(homeworkP);
-        }
-        homeworkTd.appendChild(homeworkSpan);
-        tr.appendChild(homeworkTd);
-        scheduleElement.appendChild(tr);
-    });
-</script>
 
 </html>
