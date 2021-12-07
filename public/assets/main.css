@@ -191,8 +191,9 @@ ul span {
   left: 0;
   width: 250px;
   top: 70px;
+  overflow: auto;
   height: 100%;
-  padding: 2rem 1.25rem 1.25rem 1.25rem;
+  padding: 2rem 1.25rem calc(1.25rem + 70px) 1.25rem;
   background: #f2f2f2;
 }
 
@@ -203,10 +204,18 @@ ul span {
   margin-bottom: 1.6rem;
 }
 
+#nav-topics {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
 #nav-topics > * {
+  color: #307c9c;
   font-style: italic;
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
 }
 
 .main-content {
@@ -222,6 +231,10 @@ ul span {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
   color: #307c9c;
+}
+
+.main-content > h2:target {
+  scroll-margin-top: calc(70px + 2rem);
 }
 
 .main-content > hr {
